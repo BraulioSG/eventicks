@@ -1,0 +1,122 @@
+.error404-background-text {
+  /* Position */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  /* Dimensions */
+  width: 100vw;
+  height: 100vh;
+
+  /* Alignment */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.error404-background-text h3 {
+  width: 100%;
+  overflow-x: hidden;
+
+  font-size: 15em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.error404-container {
+  /* Dimensions */
+  width: 100vw;
+  height: 100vh;
+
+  /* Alignment */
+  display: flex;
+  justify-content: center;
+}
+
+.error404-container .error404-content {
+  /* Dimensions */
+  width: 100vw;
+  height: 100vh;
+  max-width: 720px;
+  max-height: 500px;
+
+  overflow-x: hidden;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 6fr 1fr;
+  grid-template-areas:
+    "Title"
+    "Text"
+    "Button";
+}
+
+.error404-content-title {
+  text-align: center;
+  grid-area: Title;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.error404-content-title h1 {
+  /** Font properties */
+  font-size: 5em;
+  font-family: var(--boldFont);
+  font-weight: 900;
+  color: white;
+
+  letter-spacing: 15px;
+  padding-left: 15px; /* ! same as letter-spacing for adjustment*/
+  margin-left: -5px; /* ? visual adjustment */
+  /* ? Outline*/
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: var(--black);
+
+  /** 3D effect */
+  text-shadow: 0px 1px 1px var(--black), 0px 2px 1px var(--black),
+    0px 3px 1px var(--black), 0px 4px 1px var(--black), 0px 5px 1px var(--black),
+    0px 6px 1px var(--black), 0px 7px 1px var(--black), 0px 8px 1px var(--black),
+    0px 9px 1px var(--black), 0px 10px 1px var(--black);
+}
+
+.error404-content-text {
+  grid-area: Text;
+  font-size: 1.5em;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.error404-content-text p {
+  display: inline-block;
+  padding: 5px 20px;
+  font-family: var(--font);
+  font-weight: bolder;
+  border-bottom: 5px dotted black;
+}
+
+.error404-content a {
+  width: 250px;
+  margin: 50px auto;
+}
+
+@media (max-width: 600px) {
+  .error404-background-text h3 {
+    font-size: 10em;
+    text-align: center;
+  }
+
+  .error404-container .error404-content {
+    height: 500px;
+  }
+  .error404-content-text p {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0 20px;
+  }
+}

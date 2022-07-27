@@ -1,0 +1,76 @@
+.Button3D_light,
+.Button3D_dark,
+.Button3D_secondary {
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  /* Alignment */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+
+  /* text properties */
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: var(--handwrite);
+
+  /* Decoration */
+  border-radius: 10px;
+  font-weight: bolder;
+
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease, border 0.3s ease;
+}
+
+.Button3D_light:hover,
+.Button3D_dark:hover,
+.Button3D_secondary:hover {
+  border-radius: 10px;
+  transform: translate(0, 10px);
+  cursor: pointer;
+}
+
+.Button3D_light {
+  color: var(--black);
+  border-color: var(--black);
+  background-color: var(--white);
+  box-shadow: 0px 10px var(--black);
+}
+
+.Button3D_light:hover {
+  color: var(--white);
+  border-color: var(--black);
+  background: var(--black);
+  box-shadow: 0px 0px var(--black);
+}
+
+.Button3D_dark {
+  color: var(--white);
+  border-color: var(--white);
+  background-color: var(--black);
+  box-shadow: 0px 10px var(--white);
+}
+
+.Button3D_dark:hover {
+  color: var(--black);
+  border-color: var(--white);
+  background-color: var(--white);
+  box-shadow: 0px 0px var(--white);
+}
+
+.Button3D_secondary {
+  color: var(--white);
+  box-shadow: -2.5px 10px var(--black), 2.5px 10px var(--black);
+  background-color: var(--black);
+  border-color: var(--white);
+  outline: 3px solid black;
+  border-width: 3px;
+  text-decoration-color: var(--black);
+}
+
+.Button3D_secondary:hover {
+  color: var(--white);
+  border-color: var(--black);
+  background-color: var(--black);
+  cursor: pointer;
+  box-shadow: 0px 0px var(--white);
+}
