@@ -14,3 +14,46 @@
   --handwrite: "Edu SA Beginner", cursive;
   --boldFont: "Kanit", sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+.title3d-dark,
+.title3d-light {
+  /** Font properties */
+  font-size: 4em;
+  font-family: var(--boldFont);
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.title3d-dark {
+  color: var(--black);
+
+  /* ? Outline*/
+  -webkit-text-fill-color: var(--black);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--white);
+
+  /** 3D effect */
+  text-shadow: 0px 1px 1px var(--white), 0px 2px 1px var(--white),
+    0px 3px 1px var(--white), 0px 4px 1px var(--white), 0px 5px 1px var(--white),
+    0px 6px 1px var(--white), 0px 7px 1px var(--white), 0px 8px 1px var(--white),
+    0px 9px 1px var(--white), 0px 10px 1px var(--white);
+}
+
+.title3d-light {
+  color: var(--white);
+
+  /* ? Outline*/
+  -webkit-text-fill-color: var(--white);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--black);
+
+  /** 3D effect */
+  text-shadow: 0px 1px 1px var(--black), 0px 2px 1px var(--black),
+    0px 3px 1px var(--black), 0px 4px 1px var(--black), 0px 5px 1px var(--black),
+    0px 6px 1px var(--black), 0px 7px 1px var(--black), 0px 8px 1px var(--black),
+    0px 9px 1px var(--black), 0px 10px 1px var(--black);
+}

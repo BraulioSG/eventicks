@@ -13,7 +13,7 @@ function Error404() {
       <div className="error404-container">
         <div className="error404-content">
           <div className="error404-content-title">
-            <h1>SORRY</h1>
+            <h1 className="title3d-light">SORRY</h1>
           </div>
 
           <div className="error404-content-text">

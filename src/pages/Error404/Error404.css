@@ -71,16 +71,6 @@
   letter-spacing: 15px;
   padding-left: 15px; /* ! same as letter-spacing for adjustment*/
   margin-left: -5px; /* ? visual adjustment */
-  /* ? Outline*/
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke: 3px;
-  -webkit-text-stroke-color: var(--black);
-
-  /** 3D effect */
-  text-shadow: 0px 1px 1px var(--black), 0px 2px 1px var(--black),
-    0px 3px 1px var(--black), 0px 4px 1px var(--black), 0px 5px 1px var(--black),
-    0px 6px 1px var(--black), 0px 7px 1px var(--black), 0px 8px 1px var(--black),
-    0px 9px 1px var(--black), 0px 10px 1px var(--black);
 }
 
 .error404-content-text {
