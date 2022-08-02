@@ -1,0 +1,37 @@
+.form-input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.form-input-field {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-bottom: 3px solid var(--black);
+  outline: none;
+}
+
+.form-input-label {
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.form-input-label i {
+  margin-right: 5px;
+}
+
+.form-input-field:focus ~ .form-input-label,
+.form-input-field:valid ~ .form-input-label {
+  transform: translate(0, -35px);
+}

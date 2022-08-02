@@ -1,8 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-family: var(--font);
+}
+
+button:hover,
+input[type='submit'] {
+  cursor: pointer;
 }
 
 body {

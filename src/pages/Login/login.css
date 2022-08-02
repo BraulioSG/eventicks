@@ -1,45 +1,5 @@
-.login-container {
+.login-form-container {
+  margin: 50px auto;
   width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-}
-
-.login-form {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  grid-template-columns: 10px 1fr 10px;
-  grid-template-rows: 1fr 500px 1fr;
-}
-
-.login-form form {
-  width: 100%;
-  margin: auto;
   max-width: 500px;
-  grid-column: 2;
-  grid-row: 2;
-}
-
-@media screen and (max-width: 720px) {
-  .login-form {
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: calc(100vh - 100px);
-  }
-
-  .login-form form {
-    grid-row: 1;
-    margin-top: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 450px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .login-form form div button {
-    width: 300px;
-  }
 }
