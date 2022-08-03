@@ -2,7 +2,12 @@
 import './Home.css';
 
 function Home() {
-  return <></>;
+  return (
+    <>
+      <p>{process.env}</p>
+      <p>hello</p>
+    </>
+  );
 }
 
 export default Home;

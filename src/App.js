@@ -1,12 +1,13 @@
-import { Route, Switch } from "wouter";
+import { Route, Switch } from 'wouter';
 
 // *Stylesheet
-import "./App.css";
+import './App.css';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 // *Import pages
-import Home from "./pages/Home";
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
+import Home from './pages/Home';
+import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
 
 // *Import components
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/Signup" component={Signup} />
+        <Route path="/Dashboard" component={Dashboard} />
       </Switch>
     </>
   );

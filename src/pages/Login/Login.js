@@ -7,14 +7,33 @@ import FormHeader from '../../components/Forms/FormHeader/FormHeader';
 
 //tools
 import { useState } from 'react';
+import { PostApiRequest } from '../../services/ApiRequest';
+import { useLocation } from 'wouter';
+
+async function sendRequest(user) {
+  let response = await PostApiRequest('/users/login', user);
+  if (response === null) {
+    console.error('fetch failed');
+    return;
+  } else {
+    return response;
+  }
+}
 
 function Login() {
   document.title = 'Eventicks - Login';
-  const [user, setUser] = useState({});
+  const [_user, setUser] = useState({});
+  const [_location, setLocation] = useLocation();
 
-  const formHandler = (object) => {
+  const formHandler = async (object) => {
     setUser(object);
-    console.log(user);
+    const status = await sendRequest(object);
+    if (status.code === 'ok') {
+      sessionStorage.setItem('user_id', status.user_id);
+      setLocation('/dashboard');
+    } else {
+      alert(status.errors);
+    }
   };
   return (
     <>

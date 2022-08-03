@@ -8,24 +8,29 @@ import { useState } from 'react';
 
 // Tools
 import { PostApiRequest } from '../../services/ApiRequest';
+import { useLocation } from 'wouter';
 
 async function sendRequest(user) {
-  let response = await PostApiRequest('/api', user);
+  let response = await PostApiRequest('/users/signup', user);
   if (response === null) {
     console.error('fetch failed');
     return;
   } else {
-    console.log(`Response: ${JSON.stringify(response)}`);
+    return response.code;
   }
 }
 
 function Signup() {
   document.title = 'Eventicks-Signup';
-  const [user, setUser] = useState({});
+  const [_user, setUser] = useState({});
+  const [_location, setLocation] = useLocation();
 
-  const formHandler = (object) => {
+  const formHandler = async (object) => {
+    const status = await sendRequest(object);
     setUser(object);
-    sendRequest(user);
+    if (status === 'ok') {
+      setLocation('/login');
+    }
   };
   return (
     <>
@@ -33,7 +38,6 @@ function Signup() {
       <div className="login-form-container">
         {/* Uses the styles from Login.css */}
         <SignupForm setter={formHandler} />
-        <p>{JSON.stringify(user)}</p>
       </div>
     </>
   );
