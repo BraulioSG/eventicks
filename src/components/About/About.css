@@ -1,0 +1,54 @@
+.About-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.About-image {
+  width: 30%;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.About-content {
+  width: 70%;
+  min-width: 600px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.About-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.About-text {
+  text-align: justify;
+  margin: 20px;
+  font-size: 24px;
+  hyphens: auto;
+}
+
+@media screen and (max-width: 720px) {
+  .About-image {
+    width: 300px;
+  }
+  .About-content {
+    width: 100%;
+    min-width: 300px;
+  }
+  .About-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .About-text {
+    font-size: 18px;
+  }
+}

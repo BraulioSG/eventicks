@@ -1,0 +1,11 @@
+.footer {
+  width: 100vw;
+  height: 500px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer a {
+  color: var(--white);
+  text-decoration: none;
+}

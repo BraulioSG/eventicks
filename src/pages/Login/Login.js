@@ -3,10 +3,9 @@ import './login.css';
 
 //components
 import LoginForm from '../../components/Forms/LoginForm/LoginForm';
-import FormHeader from '../../components/Forms/FormHeader/FormHeader';
+import MinimalHeader from '../../components/MinimalHeader/MinimalHeader';
 
 //tools
-import { useState } from 'react';
 import { PostApiRequest } from '../../services/ApiRequest';
 import { useLocation } from 'wouter';
 
@@ -22,11 +21,10 @@ async function sendRequest(user) {
 
 function Login() {
   document.title = 'Eventicks - Login';
-  const [_user, setUser] = useState({});
+  /* eslint-disable no-unused-vars */
   const [_location, setLocation] = useLocation();
 
   const formHandler = async (object) => {
-    setUser(object);
     const status = await sendRequest(object);
     if (status.code === 'ok') {
       sessionStorage.setItem('user_id', status.user_id);
@@ -37,7 +35,7 @@ function Login() {
   };
   return (
     <>
-      <FormHeader />
+      <MinimalHeader />
       <div className="login-form-container">
         <LoginForm setter={formHandler} />
       </div>

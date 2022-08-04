@@ -1,0 +1,86 @@
+.notFound-container {
+  display: flex;
+  height: calc(100vh - var(--minimalHeader-height));
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notFound-box {
+  width: 100vw;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px #0000004f;
+  position: relative;
+}
+
+.notFound-figure {
+  min-width: 300px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notFound-figure figcaption {
+  font-size: 10px;
+  text-align: left;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.notFound-figure figcaption a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.notFound-figure figcaption a:hover {
+  font-weight: bold;
+}
+
+.notFound-figure img {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+}
+
+.notFound-button a {
+  /* alignment */
+  padding: 10px 20px;
+  vertical-align: middle;
+
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+  border: 3px solid var(--black);
+
+  transition: background 0.3s ease, color 0.3s ease, width 0.3s ease;
+}
+
+.notFound-button a:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.notFound-button a > span {
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.notFound-button a > i {
+  width: 0;
+  opacity: 0;
+  vertical-align: middle;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+.notFound-box a:hover > i {
+  opacity: 1;
+  width: 10px;
+  margin-left: 10px;
+}

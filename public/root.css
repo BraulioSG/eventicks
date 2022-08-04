@@ -13,6 +13,10 @@
   --font: 'Montserrat', sans-serif;
   --handwrite: 'Edu SA Beginner', cursive;
   --boldFont: 'Kanit', sans-serif;
+
+  /* * DIMENSIONS */
+  --minimalHeader-height: 75px;
+  scroll-behavior: smooth;
 }
 
 body {

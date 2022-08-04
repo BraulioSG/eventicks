@@ -1,0 +1,105 @@
+.HeaderBar {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: var(--black);
+  color: var(--white);
+  height: var(--minimalHeader-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HeaderBar h1 {
+  flex-grow: 1;
+  width: 100%;
+  font-size: 42px;
+  margin-left: 50px;
+  transition: margin 0.3s ease;
+}
+
+.HeaderBar nav {
+  flex-grow: 1;
+  width: 50%;
+  min-width: 350px;
+  margin-right: 50px;
+}
+
+.HeaderBar-burger-button {
+  flex-grow: 1;
+  width: 50px;
+  height: 100%;
+  display: none;
+  margin-right: 10px;
+
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  z-index: 10;
+}
+
+.HeaderBar-burger-button i {
+  font-size: 36px;
+}
+
+.mobileMenu {
+  width: 100vw;
+  height: calc(100vh - var(--minimalHeader-height));
+  background-color: var(--black);
+  position: absolute;
+  top: var(--minimalHeader-height);
+  position: fixed;
+  right: 0;
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+
+.mobileMenu.hide {
+  width: 0%;
+}
+
+.mobileMenu.hide nav {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .HeaderBar h1 {
+    flex-grow: 3;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .HeaderBar nav {
+    display: none;
+  }
+
+  .HeaderBar-burger-button {
+    display: block;
+  }
+
+  .mobileMenu nav {
+    width: 100%;
+  }
+  .mobileMenu nav ul {
+    flex-direction: column;
+    padding-bottom: var(--minimalHeader-height);
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .HeaderBar h1 {
+    margin-left: 20px;
+  }
+  .HeaderBar nav {
+    margin-left: 10px;
+  }
+}

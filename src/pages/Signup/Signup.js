@@ -3,9 +3,7 @@ import './Signup.css';
 
 // Components
 import SignupForm from '../../components/Forms/SignupForm/SignupForm';
-import FormHeader from '../../components/Forms/FormHeader/FormHeader';
-import { useState } from 'react';
-
+import MinimalHeader from '../../components/MinimalHeader/MinimalHeader';
 // Tools
 import { PostApiRequest } from '../../services/ApiRequest';
 import { useLocation } from 'wouter';
@@ -22,19 +20,18 @@ async function sendRequest(user) {
 
 function Signup() {
   document.title = 'Eventicks-Signup';
-  const [_user, setUser] = useState({});
+  /* eslint-disable no-unused-vars */
   const [_location, setLocation] = useLocation();
 
   const formHandler = async (object) => {
     const status = await sendRequest(object);
-    setUser(object);
     if (status === 'ok') {
       setLocation('/login');
     }
   };
   return (
     <>
-      <FormHeader />
+      <MinimalHeader />
       <div className="login-form-container">
         {/* Uses the styles from Login.css */}
         <SignupForm setter={formHandler} />
